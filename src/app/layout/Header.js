@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 class Header extends React.Component {
 
@@ -20,7 +21,11 @@ class Header extends React.Component {
                 borderBottom: 'solid 1px #dddddd',
               }}>
             <div className="navbar-brand">
-              <a className="navbar-item">
+              <NavLink 
+                className="navbar-item"
+                to="/"
+                activeClassName="is-active"
+                >
                 <img
                   style={{
                     borderTopLeftRadius: '50%',
@@ -32,7 +37,7 @@ class Header extends React.Component {
                   src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAU3AAAAJGE1MzYxNzYzLTE1NTUtNDEyYi04MzRjLTgzZjNkOGU0MGIzNg.jpg"
                   width="30px" alt="" />
                 <span>AaronKlaser.com</span>
-              </a>
+              </NavLink>
               <button className="button navbar-burger" onClick={this.toggleNav}>
                 <span></span>
                 <span></span>
@@ -41,12 +46,16 @@ class Header extends React.Component {
             </div>
             <div className={ this.state.isActive ? 'navbar-menu is-active' : 'navbar-menu'}>
               <div className="navbar-start">
-                <a className="navbar-item">
+                <NavLink 
+                    className="navbar-item"
+                    to="/blog"
+                    activeClassName="is-active"
+                >
                   <span className="icon has-text-primary" style={{ marginRight: 5 }}>
                     <i className="fas fa-code"></i>
                   </span>
                   Code Blog
-                </a>
+                </NavLink>
                 <a className="navbar-item">
                   <span className="icon" style={{ marginRight: 5 }}>
                     <i className="fab fa-lg fa-medium"></i>

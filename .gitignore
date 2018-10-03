@@ -8,6 +8,8 @@
 
 # production
 /build
+
+# generated css
 src/**/*.css
 
 # misc

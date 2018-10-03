@@ -5,3 +5,12 @@ Following a blog series written by Aaron Klaser (https://hackernoon.com/building
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+## Folder Structure
+
+All components required by a page go to it’s node folder. 
+If the component is required by more than one components, like a branded button, then it goes to the src.components folder. 
+
+End result should kind of resemble JSON structure.
+
+
+

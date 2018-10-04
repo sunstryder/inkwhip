@@ -23,8 +23,11 @@ const BlogItem = (props) => {
                         <div className="level-left">
                             <Link 
                                 className="level-item button is-small is-link is-outlined"
-                                to="/blog">
-                                Back to Blog
+                                to={{
+                                    pathname: `/blog${props.path}`,
+                                    state: { props }
+                                }}>
+                                Read More
                             </Link>
                         </div>
                         <div className="level-right">

@@ -36,7 +36,7 @@ class Header extends React.Component {
                   }}
                   src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAU3AAAAJGE1MzYxNzYzLTE1NTUtNDEyYi04MzRjLTgzZjNkOGU0MGIzNg.jpg"
                   width="30px" alt="" />
-                <span>AaronKlaser.com</span>
+                <span>sunstryder</span>
               </NavLink>
               <button className="button navbar-burger" onClick={this.toggleNav}>
                 <span></span>
@@ -81,7 +81,7 @@ class Header extends React.Component {
                 </div>
               </div>
               <div className="navbar-end">
-                <a className="navbar-item" href="https://github.com/aaronklaser">
+                <a className="navbar-item" href="https://github.com/sunstryder">
                   <span className="icon">
                     <i className="fab fa-lg fa-github"></i>
                   </span>

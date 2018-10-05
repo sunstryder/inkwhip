@@ -2,14 +2,14 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
 
-const BlogNav = ({ to, date }) => (
+const BlogNav = ({ to, date, label }) => (
     <nav className="level">
         <div className="level-left">
             <Link
                 className="level-item button is-small is-link is-outlined"
                 to={to}
             >
-                Read More
+                {label}
             </Link>
         </div>
         <div className="level-right">

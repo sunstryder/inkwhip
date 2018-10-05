@@ -6,7 +6,7 @@ import BlogContent from './shared/BlogContent'
 
 const BlogPost = ({ location: { state: { props } }}) => (
         <PageContent>
-            <BlogNav date={props.date} to="/blog"/>
+            <BlogNav status={props.status} date={props.date} to="/blog" label="Back to Blog"/>
             <BlogContent {...props}/>
         </PageContent>
 )

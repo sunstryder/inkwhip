@@ -56,12 +56,12 @@ class Header extends React.Component {
                   </span>
                   Code Blog
                 </NavLink>
-                <a className="navbar-item">
+                <NavLink className="navbar-item" to="/medium">
                   <span className="icon" style={{ marginRight: 5 }}>
                     <i className="fab fa-lg fa-medium"></i>
                   </span>
                   Medium
-                </a>
+                </NavLink>
                 <div className="navbar-item has-dropdown is-hoverable">
                   <a className="navbar-link" >
                     Projects

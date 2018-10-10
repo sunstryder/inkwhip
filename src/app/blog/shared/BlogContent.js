@@ -5,7 +5,7 @@ const BlogContent = (props) => (
     <article className="media">
         <div className="media-left">
             <figure className="image is-64x64">
-                <img src={props.icon} alt="Image" />
+                <img src={props.icon} alt="icon" />
             </figure>
         </div>
         <div className="media-content">

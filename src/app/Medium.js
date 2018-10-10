@@ -10,19 +10,12 @@ class Medium extends React.Component {
     }
 
     componentDidMount() {
-        // this.fetchPosts().then(this.setPosts)
-        this.fetchPosts();
-        console.log(this.fetchPosts());
-        console.log(this.state)
+        this.fetchPosts().then(this.setPosts)
     }
 
+    // This will be blocked by CORS. INCOMPLETE
     // Add error or loading messaging
-    // fetchPosts = () => axios.get(`https://medium.com/@ztrana/latest?format=json`)
-    fetchPosts = () => {
-        return {
-            tony: 'blah'
-        };
-    };
+    fetchPosts = () => axios.get(`https://cors.now.sh/https://us-central1-aaronklaser-1.cloudfunctions.net/medium?username=@sunstryder`)
 
     setPosts = response => {
         this.setState({
@@ -38,8 +31,9 @@ class Medium extends React.Component {
                     <br/><br/>
                     <a
                         className="button is-inverted is-outlined"
-                        href="https://medium.com/@aaron.klaser"
+                        href="https://medium.com/@sunstryder"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         View my Medium
                         <span

@@ -6,9 +6,19 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import App from './App'
 import './index.css'
 
+//Store
+import { Provider } from 'react-redux'
+import { configureStore } from './store'
+import { loadBlog } from './store/Blog'
+
+const store = configureStore()
+store.dispatch(loadBlog())
+
 ReactDOM.render((
-    <Router>
-        <App />
-    </Router>
+    <Provider store={store}>
+        <Router>
+            <App />
+        </Router>
+    </Provider>
 ), document.getElementById('root'))
 registerServiceWorker()

@@ -8,7 +8,7 @@ export default function blogReducer(state = initialState.blog, action) {
         case types.LOAD_BLOG_SUCCESS:
             return {
                 ...state,
-                posts: action.posts
+                posts: action.payload
             }
         default:
             return state

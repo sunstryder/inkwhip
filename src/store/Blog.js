@@ -12,10 +12,15 @@ const error = err => console.log(err)
 
 // this calls to contentful, and passes the data from there into loadBlogSuccess action.
 export function loadBlog() {
-    return dispatch =>
-    client.getEntries()
-        .then(({items}) => {
-            dispatch(actions.loadBlogSuccess(items))
-        })
-        .catch(error)
+    return dispatch => {
+        dispatch(actions.blogLoading())
+        return client.getEntries()
+            .then(({items}) => {
+                dispatch(actions.loadBlogSuccess(items))
+            })
+            .catch(error => {
+                console.log(error)
+                dispatch(actions.blogLoading(false))
+            })
+    }
 }
